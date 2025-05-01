@@ -77,12 +77,11 @@ p {
   background-repeat: no-repeat;
   height: 350px;
   width: 400px;
-
   position: fixed;
   top: 60%;
   left: 65%;
-
   z-index: 1;
+  pointer-events: none;
 }
 
 .project-box {
@@ -162,7 +161,7 @@ body::before {
 
 .project-grid {
   display: grid;
-  
+  grid-template-columns: repeat(2, 1fr);
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   padding: 0;
   gap: 20px;
@@ -294,12 +293,12 @@ body.snuggle-page #snuggles-image {
 }
 
 @media (max-width: 768px) {
-  .project-box {
-    flex-direction: column;
-    font-size: 0.9rem;
-  }
-
-  nav ul {
-    flex-direction: column;
+  .Snuggs {
+    width: 40vw;          /* Adjust image width for mobile */
+    height: auto;         /* Maintain aspect ratio */
+    bottom: 10px;         /* Position at the bottom on mobile */
+    right: 10px;          /* Position on the right side of the screen */
+    top: auto;            /* Remove top positioning */
+    left: auto;           /* Reset left positioning */
   }
 }
