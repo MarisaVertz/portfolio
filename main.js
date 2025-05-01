@@ -54,10 +54,4 @@ window.addEventListener("click", function (e) {
   }
 });
 
-const counterEl = document.getElementById("snuggles-view-counter");
 
-fetch("https://api.countapi.xyz/update/snuggles/secretpage/?amount=1")
-  .then((res) => res.json())
-  .then((data) => {
-    counterEl.textContent = `You're one of ${data.value} people in the whole world who have seen this page!!`;
-  });
