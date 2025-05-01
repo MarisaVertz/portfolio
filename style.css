@@ -21,7 +21,7 @@ hr {
   position: fixed;
   top: 2%;
   left: 2%;
-  width: 90vw;
+  width: 94vw;
   height: 90vw;
   margin: auto;
   padding: 10px;
@@ -32,7 +32,7 @@ hr {
     rgba(255, 247, 247, 0.511),
     rgba(255, 249, 249, 0) 80%
   );
-  z-index: -2;
+  z-index: -1;
 }
 
 li,
@@ -51,6 +51,7 @@ h1 {
 h2 {
   font-size: 26px;
   color: #574949;
+  margin: 5px 5px 5px 0;
 }
 
 h3 {
@@ -71,30 +72,30 @@ p {
 }
 
 .Snuggs {
+  position: absolute; 
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
   background-image: url("./assets/images/Snugglesnobackground.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  position: fixed;
-  bottom: 0; 
-  right: 0;
-  width: 50vw;
-  height: 50vw; 
-  z-index: 9999; 
-  pointer-events: none; 
-  visibility: visible !important; 
-  display: block !important; 
+  pointer-events: none;
 }
 
 @media (min-width: 769px) {
   .Snuggs {
-    bottom: 0; 
-    right: 5vw; 
-    width: 20vw; 
-    height: 20vw; 
+    width: 30vw;
+    height: 30vw;
+    right: 40px;
+    bottom: 0;
   }
 }
 
+.snuggles-overlay {
+  background: none !important;
+}
 
 .project-box {
   position: relative;
@@ -103,16 +104,26 @@ p {
   margin: 0 0 20px 40px;
   border-radius: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
   max-width: 500px;
   width: 100%;
 }
 
 body.project-page .Snuggs {
-  position: fixed;
   z-index: -1;
 }
 
+#about .about-box {
+  background-color: rgba(250, 239, 239, 0.762); 
+  backdrop-filter: blur(15px); 
+  padding: 20px; 
+  border-radius: 15px; 
+  position: relative; 
+  z-index: 1; 
+  max-width: 800px; 
+  margin: auto; 
+}
 
 .navbar {
   background-color: #d9ccd722;
@@ -124,6 +135,7 @@ body.project-page .Snuggs {
   text-align: center;
   margin-bottom: 35px;
 }
+
 body::before {
   content: "";
   position: fixed;
@@ -134,6 +146,7 @@ body::before {
   background: rgba(228, 197, 197, 0.121);
   z-index: -1;
 }
+
 .navbar a {
   color: #8d7777f5;
   padding: 12px 18px;
@@ -269,19 +282,28 @@ img {
   break-inside: avoid;
 }
 
-
 .snuggles-nose-button {
   position: absolute;
-  top: 38%; 
-  left: 46%; 
+  top: 38%;  
+  left: 45%;
   width: 40px;
   height: 40px;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-  background: transparent;
+  transform: translate(-50%, -50%); 
+  background: transparent; 
   border: none;
-  z-index: 10;
-  pointer-events: auto;
+  z-index: 10000; 
+  cursor: pointer;
+  pointer-events: auto; 
+}
+
+.snuggles-wrapper {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 50vw; 
+  height: 50vw; 
+  pointer-events: none;
+  z-index: -1; 
 }
 
 #snuggles-image {
@@ -292,3 +314,22 @@ body.snuggle-page #snuggles-image {
   display: none; 
 }
 
+@media (max-width: 768px) {
+  .snuggles-wrapper {
+    width: 50vw;  
+    height: 50vw; 
+    bottom: 10px;
+    right: 10px; 
+  }
+}
+
+body.project-page .snuggles-wrapper {
+  z-index: -2; 
+}
+
+@media (min-width: 769px) {
+  .snuggles-nose-button {
+    top: 62%;   
+    left: 60%;
+  }
+}
