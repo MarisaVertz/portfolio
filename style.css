@@ -261,13 +261,15 @@ img {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  height: 350px;
-  width: 400px;
   position: fixed;
-  top: 60%;
-  left: 65%;
+  bottom: 10px;
+  right: 10px;
+  width: 40vw;
+  height: auto;
   z-index: 1;
   pointer-events: none;
+  display: block;
+  visibility: visible;
 }
 
 .snuggles-nose-button {
@@ -292,13 +294,13 @@ body.snuggle-page #snuggles-image {
   display: none; 
 }
 
-@media (max-width: 768px) {
+@media (min-width: 769px) {
   .Snuggs {
-    width: 40vw;          /* Adjust image width for mobile */
-    height: auto;         /* Maintain aspect ratio */
-    bottom: 10px;         /* Position at the bottom on mobile */
-    right: 5px;          /* Position on the right side of the screen */
-    top: auto;            /* Remove top positioning */
-    left: auto;           /* Reset left positioning */
+    width: 400px;
+    height: 350px;
+    top: 60%;
+    left: 65%;
+    bottom: auto;
+    right: auto;
   }
 }
