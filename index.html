@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  </head>
+  <body>
+    <h1 style="text-align: center; margin-top: 10px;">Marisa Vertz</h1>
+    <div class="navbar">
+      <a href="#" onclick="showSection('home')">Home</a>
+      <a href="#" onclick="showSection('projects')">Projects</a>
+      <a href="#" onclick="showSection('about')">About</a>
+      <a href="#" onclick="showSection('contact')">Contact</a>
+    </div>
+
+    <div id="home" class="content-section">
+      <h2>Welcome to my portfolio!</h2>
+      <p>Before you dive in, take a moment to admire Snuggles, my majestic muse with whiskers, in his finest sneeze-ready splendor. Unmatched, really.
+      <br /><br />Now, give him a nose boop, then go read my About page.</p>
+    </div>
+    
+    <div id="projects" class="content-section" style="display: none;">
+      <h2>Project Portfolio</h2><hr />
+      <h3>HTML Projects</h3>
+      <ul class="project-grid">
+        <li>
+          <h4>Travel Agency Blog</h4>
+          <a href="https://github.com/YOUR_USERNAME/..." class="github-btn" target="_blank">🐙 View on GitHub</a>
+          <p>In this project we had to create a mockup travel agency blog post with basic HTML properties.</p>
+          <a href="#" onclick="openProject('./public/travel-agency-blog.html'); return false;"><img src="./assets/images/TravelAgencyBlog.png" width="300" class="project-preview"></a>
+        </li>
+        <li>
+          <h4>Recipe: Concert Tickets</h4>
+          <a href="https://github.com/YOUR_USERNAME/..." class="github-btn" target="_blank">🐙 View on GitHub</a>
+          <p>In this project we had to create a "<strong>unique</strong> recipe" with basic HTML properties. For the record, I'm not particularly a 'Swiftie' but I was having a dreary day when I made this and it made me laugh so I went with it.</p>
+          <a href="#" onclick="openProject('./public/recipe.html'); return false;"><img src="./assets/images/recipe.png" width="300" class="project-preview"></a>
+        </li>
+        <li>
+          <h4>Birthday Invite</h4>
+          <a href="https://github.com/YOUR_USERNAME/..." class="github-btn" target="_blank">🐙 View on GitHub</a>
+          <p>In this project we had to create a mockup birthday invite with basic HTML properties.</p>
+          <a href="#" onclick="openProject('./public/birthday-invite.html'); return false;"><img src="./assets/images/birthday--invite.png" width="300" class="project-preview"></a> 
+        </li>
+        <li>
+          <h4>Movie Ranking</h4>
+          <a href="https://github.com/YOUR_USERNAME/..." class="github-btn" target="_blank">🐙 View on GitHub</a>
+          <p>This project was one of my first HTML assignments. In this project we had to create a movie rankings page with basic HTML properties.</p>
+          <a href="#" onclick="openProject('./public/movie-ranking.html'); return false;"><img src="./assets/images/movie--ranking.png" width="300" class="project-preview"></a>
+       </li>
+    </div>
+
+    <div id="about" class="content-section" style="display: none;">
+      <h2>About Me</h2><hr />
+      <p>Hi! I’m Marisa, a certified web developer and multidisciplinary artist with a background in music, design, and digital storytelling. I hold a Bachelor of Science in Music Production and a Master of Science in Entertainment Business which together have shaped a creative yet strategic approach to building thoughtful, impactful experiences online.</p>
+      <p>Professionally, I’ve specialized in web content, design, and development, blending clean functionality with visual intention. Since 2017, I’ve dedicated my career to a non-profit arts institution where I’ve specialized in web content, design, and development. </p>
+      <p>With roots in the arts and a strong eye for detail, I approach web development as both a craft and a form of expression. Whether I’m composing, illustrating, or coding, I bring curiosity, care, and a commitment to creating digital spaces that resonate.</p>
+      <p>Away from the keyboard, you’ll find me enjoying my cats, making music, hiking, and drawing inspiration from nature. My curiosity keeps me exploring new ideas and seeking fresh perspectives.</p>
+      <p>Let’s build something meaningful together.</p>
+    </div>
+
+    <div id="contact" class="content-section" style="display: none;">
+      <h2>Contact Me</h2><hr />
+      <p><strong>Telephone<br /></strong>1 (720) 779-5880</p>
+      <p><strong>Email<br /></strong>marisalvertz@gmail.com</p>
+    </div>
+
+    <div id="lightbox" class="lightbox" style="display: none;" onclick="closeLightbox()">
+      <div class="lightbox-content" onclick="event.stopPropagation();">
+        <span class="close-btn" onclick="closeLightbox()">&times;</span>
+        <div id="lightbox-body"></div>
+      </div>
+    </div>
+  
+    <div class=box></div>
+    <div class="Snuggs" id="snuggles-image"></div>
+    <div class="Snuggs">
+      <a href="./public/secret-snuggles-page.html" class="snuggles-nose-button" aria-label="Secret Snuggles Page"></a>
+    </div>
+
+  </body>
+</html>
