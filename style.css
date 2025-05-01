@@ -71,20 +71,28 @@ p {
 }
 
 .Snuggs {
-  all: unset; /* nukes previous conflicting styles */
   background-image: url("./assets/images/Snugglesnobackground.png");
-  background-size: contain;
+  background-size: contain; /* Ensures it scales correctly */
   background-position: center;
   background-repeat: no-repeat;
   position: fixed;
-  bottom: -10vh;
-  left: 5vw;
-  width: 55vw;
-  height: auto;
-  z-index: 1;
-  pointer-events: none;
-  display: block !important;
-  visibility: visible !important;
+  bottom: 0; /* Align with the bottom of the screen */
+  right: 0; /* Align with the right side of the screen */
+  width: 50vw; /* Adjust size for mobile */
+  height: 50vw; /* Maintain square aspect ratio */
+  z-index: 9999; /* Ensure it's on top */
+  pointer-events: none; /* Disable interaction */
+  visibility: visible !important; /* Force visibility */
+  display: block !important; /* Force display */
+}
+
+@media (min-width: 769px) {
+  .Snuggs {
+    bottom: 0; /* Keep at the bottom for desktop */
+    right: 0; /* Keep on the right side */
+    width: 20vw; /* Adjust size for desktop */
+    height: 20vw; /* Keep square aspect ratio */
+  }
 }
 
 
@@ -284,14 +292,3 @@ body.snuggle-page #snuggles-image {
   display: none; 
 }
 
-@media (max-width: 768px) {
-  .Snuggs {
-    bottom: 5vh;
-    left: 3vw;
-    width: 65vw;
-    height: auto;
-    top: auto !important;
-    display: block !important;
-    visibility: visible !important;
-  }
-}
