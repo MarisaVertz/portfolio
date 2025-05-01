@@ -162,6 +162,7 @@ body::before {
 
 .project-grid {
   display: grid;
+  
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   padding: 0;
   gap: 20px;
@@ -300,20 +301,5 @@ body.snuggle-page #snuggles-image {
 
   nav ul {
     flex-direction: column;
-  }
-}
-
-@media (max-width: 768px) {
-  .Snuggs {
-    width: 35vw;
-    height: auto;
-    top: auto;
-    bottom: 0;
-    left: auto;
-    right: 0;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    display: block;
   }
 }
