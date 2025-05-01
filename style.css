@@ -71,18 +71,22 @@ p {
 }
 
 .Snuggs {
+  all: unset; /* nukes previous conflicting styles */
   background-image: url("./assets/images/Snugglesnobackground.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  height: 350px;
-  width: 400px;
   position: fixed;
-  top: 60%;
-  left: 65%;
+  bottom: -10vh;
+  left: 5vw;
+  width: 55vw;
+  height: auto;
   z-index: 1;
   pointer-events: none;
+  display: block !important;
+  visibility: visible !important;
 }
+
 
 .project-box {
   position: relative;
@@ -100,6 +104,7 @@ body.project-page .Snuggs {
   position: fixed;
   z-index: -1;
 }
+
 
 .navbar {
   background-color: #d9ccd722;
@@ -256,21 +261,6 @@ img {
   break-inside: avoid;
 }
 
-.Snuggs {
-  background-image: url("./assets/images/Snugglesnobackground.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: fixed;
-  bottom: -10vh;
-  right: 10vw;
-  width: 55vw;
-  height: auto;
-  z-index: 1;
-  pointer-events: none;
-  display: block;
-  visibility: visible;
-}
 
 .snuggles-nose-button {
   position: absolute;
@@ -294,13 +284,14 @@ body.snuggle-page #snuggles-image {
   display: none; 
 }
 
-@media (min-width: 769px) {
+@media (max-width: 768px) {
   .Snuggs {
-    width: 400px;
-    height: 350px;
-    top: 60%;
-    left: 65%;
-    bottom: auto;
-    right: auto;
+    bottom: 5vh;
+    left: 3vw;
+    width: 65vw;
+    height: auto;
+    top: auto !important;
+    display: block !important;
+    visibility: visible !important;
   }
 }
