@@ -297,7 +297,7 @@ body.snuggle-page #snuggles-image {
     width: 40vw;          /* Adjust image width for mobile */
     height: auto;         /* Maintain aspect ratio */
     bottom: 10px;         /* Position at the bottom on mobile */
-    right: 10px;          /* Position on the right side of the screen */
+    right: 5px;          /* Position on the right side of the screen */
     top: auto;            /* Remove top positioning */
     left: auto;           /* Reset left positioning */
   }
