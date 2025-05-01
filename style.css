@@ -162,7 +162,7 @@ body::before {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   padding: 0;
   gap: 20px;
   margin: 10px;
@@ -214,6 +214,8 @@ body::before {
 img {
   outline: 1px solid #f3e8e8;
   outline-offset: 2px;
+  max-width: 100%;
+  height: auto;
 }
 
 .github-btn {
@@ -246,6 +248,7 @@ img {
 
 .snuggles-gallery img {
   width: 100%;
+  height: auto;
   display: block;
   margin-bottom: 20px;
   border-radius: 12px;
@@ -287,4 +290,26 @@ img {
 
 body.snuggle-page #snuggles-image {
   display: none; 
+}
+
+@media (max-width: 768px) {
+  .project-box {
+    flex-direction: column;
+    font-size: 0.9rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .Snuggs {
+    height: auto;
+    width: 50vw;
+    top: auto;
+    bottom: 10px;
+    left: auto;
+    right: 10px;
+  }
 }
