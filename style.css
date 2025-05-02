@@ -7,13 +7,17 @@ body {
   background-size: cover; !*important;
   background-position: center; !important;
   background-repeat: no-repeat; !important;
-  background-attachment: fixed; !important;
+  background-attachment: scroll; !important;
   position: relative; !important;
 }
 
 @media (max-width: 768px) {
   body {
-    background-color: #c40101; /* Temporary test with a solid color */
+    background-image: url("./assets/images/pastel2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll; /* Remove fixed for mobile */
   }
 }
 
@@ -354,7 +358,7 @@ img {
   width: 60px;
   height: 60px;
   transform: translate(-50%, -50%); 
-  background: red; 
+  background: transparent; 
   border: none;
   z-index: 10000; 
   cursor: pointer;
@@ -365,7 +369,7 @@ img {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 68vw; 
+  width: 75vw; 
   height: 40vw; 
   pointer-events: none;
   z-index: -1; 
