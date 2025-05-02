@@ -71,6 +71,26 @@ p {
   margin: 10px 5px 15px 0;
 }
 
+@media (max-width: 768px) {
+  h1 {
+    font-size: 25px; 
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+
+
+  h4 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 12px;
+  }
+}
+
 .Snuggs {
   position: absolute; 
   bottom: 0;
@@ -127,13 +147,26 @@ body.project-page .Snuggs {
 
 .navbar {
   background-color: #d9ccd722;
-  width: 350px;
+  width: 100%;  
+  max-width: 350px;  
   margin: 0 auto;
-  padding: 1px 20px;
+  padding: 1px 10px; 
   border-radius: 18px;
   box-shadow: 0px 1px 25px rgba(231, 209, 209, 0.923);
   text-align: center;
   margin-bottom: 35px;
+  display: flex;
+  justify-content: center;  
+  flex-wrap: nowrap;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%; 
+    padding: 8px 12px; 
+    font-size: 12px; 
+  }
 }
 
 body::before {
@@ -154,13 +187,28 @@ body::before {
   font-size: 14px;
   font-weight: bold;
   display: inline-block;
-  white-space: nowrap;
+  white-space: nowrap;  
+  text-align: center;
 }
 
 .navbar a:hover {
   background-color: #ba949415;
   border-radius: 8px;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;  
+    padding: 8px 12px;  
+    font-size: 12px;  
+  }
+
+  .navbar a {
+    font-size: 12px; 
+    padding: 4px 8px;  
+  }
+}
+
 
 .content-section {
   max-width: 800px;
@@ -282,6 +330,16 @@ img {
   break-inside: avoid;
 }
 
+@media (max-width: 768px) {
+  .snuggles-gallery {
+    column-gap: 5px;
+    padding: 10px;
+  }
+  .snuggles-gallery img {
+    margin-bottom: 5px;
+  }
+}
+
 .snuggles-nose-button {
   position: absolute;
   top: 38%;  
@@ -333,3 +391,4 @@ body.project-page .snuggles-wrapper {
     left: 60%;
   }
 }
+
