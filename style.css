@@ -8,6 +8,7 @@ body {
   background-position: center; !important;
   background-repeat: no-repeat; !important;
   background-attachment: fixed; !important;
+  position: relative;
 }
 
 @media (max-width: 768px) {
