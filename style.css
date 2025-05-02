@@ -9,6 +9,7 @@ body {
   background-repeat: no-repeat; 
   background-attachment: fixed; 
   position: relative; 
+  z-index: 0;
 }
 
 @media (max-width: 768px) {
@@ -35,14 +36,14 @@ hr {
   height: 90vw;
   margin: auto;
   padding: 10px;
-  background-color: transparent;
+  background-color: #57333370;
   border-radius: 20px;
   background: linear-gradient(
     to bottom,
     rgba(255, 247, 247, 0.511),
     rgba(255, 249, 249, 0) 80%
   );
-  z-index: -1;
+  z-index:-1;
 }
 
 li,
