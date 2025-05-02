@@ -351,8 +351,8 @@ img {
   position: absolute;
   top: 38%;  
   left: 45%;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   transform: translate(-50%, -50%); 
   background: red; 
   border: none;
@@ -365,7 +365,7 @@ img {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 76vw; 
+  width: 68vw; 
   height: 40vw; 
   pointer-events: none;
   z-index: -1; 
