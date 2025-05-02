@@ -3,13 +3,17 @@ body {
   margin: 20px;
   padding: 20px;
   color: #231717;
+
   background-image: url("./assets/images/pastel2.png");
-  background-size: cover; !*important;
-  background-position: center; !important;
-  background-repeat: no-repeat; !important;
-  background-attachment: fixed; !important;
-  position: relative; !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; 
+  position: relative;
+  min-height: 100vh;
 }
+
+
 
 body {
   min-height: 100vh;
@@ -37,7 +41,6 @@ hr {
     rgba(255, 249, 249, 0) 80%
   );
   z-index: -1;
-  display: none;
 }
 
 li,
