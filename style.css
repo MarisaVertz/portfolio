@@ -11,14 +11,7 @@ body {
   position: relative;
 }
 
-@media (max-width: 768px) {
-  body {
-    background-image: url("./assets/images/pastel2.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
+
 
 hr {
   border: none;
@@ -145,7 +138,7 @@ body.project-page .Snuggs {
 }
 
 #about .about-box {
-  background-color: rgba(250, 239, 239, 0.762); 
+  background-color: rgba(251, 245, 245, 0.762); 
   backdrop-filter: blur(15px); 
   padding: 20px; 
   border-radius: 15px; 
@@ -403,3 +396,11 @@ body.project-page .snuggles-wrapper {
   }
 }
 
+@media (max-width: 768px) {
+  body {
+    background-image: url("./assets/images/pastel2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
