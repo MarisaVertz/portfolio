@@ -279,6 +279,8 @@ body.project-page .Snuggs {
 
 
 
+
+
 .close-btn {
   position: absolute;
   top: 10px;
@@ -287,6 +289,15 @@ body.project-page .Snuggs {
   color: #333;
   cursor: pointer;
   z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .lightbox-content {
+    max-width: 90vw;
+    max-height: 95vh;
+    padding: 15px;
+    border-radius: 10px;
+  }
 }
 
 img {
