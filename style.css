@@ -8,7 +8,7 @@ body {
   background-position: center; !important;
   background-repeat: no-repeat; !important;
   background-attachment: fixed; !important;
-  position: relative;
+  position: relative; !important;
 }
 
 @media (max-width: 768px) {
@@ -113,7 +113,7 @@ p {
 @media (min-width: 769px) {
   .Snuggs {
     width: 50vw;
-    height: 30vw;
+    height: 25vw;
     right: 40px;
     bottom: 0;
   }
@@ -354,7 +354,7 @@ img {
   width: 40px;
   height: 40px;
   transform: translate(-50%, -50%); 
-  background: transparent; 
+  background: red; 
   border: none;
   z-index: 10000; 
   cursor: pointer;
@@ -365,8 +365,8 @@ img {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 100vw; 
-  height: 50vw; 
+  width: 76vw; 
+  height: 40vw; 
   pointer-events: none;
   z-index: -1; 
   margin: 0;
