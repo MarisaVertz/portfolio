@@ -4,14 +4,17 @@ body {
   padding: 20px;
   color: #231717;
   background-image: url("./assets/images/pastel2.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position: relative;
+  background-size: cover; !*important;
+  background-position: center; !important;
+  background-repeat: no-repeat; !important;
+  background-attachment: fixed; !important;
 }
 
-
+@media (max-width: 768px) {
+  body {
+    background-color: #c40101; /* Temporary test with a solid color */
+  }
+}
 
 hr {
   border: none;
@@ -396,11 +399,3 @@ body.project-page .snuggles-wrapper {
   }
 }
 
-@media (max-width: 768px) {
-  body {
-    background-image: url("./assets/images/pastel2.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
