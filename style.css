@@ -180,16 +180,7 @@ body.project-page .Snuggs {
   }
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(228, 197, 197, 0.121);
-  z-index: -1;
-}
+
 
 .navbar a {
   color: #8d7777f5;
