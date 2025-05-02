@@ -3,20 +3,22 @@ body {
   margin: 20px;
   padding: 20px;
   color: #231717;
-
   background-image: url("./assets/images/pastel2.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll; 
-  position: relative;
-  min-height: 100vh;
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  position: relative; 
 }
 
-
-
-body {
-  min-height: 100vh;
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-image: url("./assets/images/pastel2.png");
+    background-position: center;
+  }
 }
 
 hr {
