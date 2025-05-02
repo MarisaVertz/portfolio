@@ -28,23 +28,7 @@ hr {
   background-color: #d5c7c78b;
 }
 
-.box {
-  position: fixed;
-  top: 2%;
-  left: 2%;
-  width: 94vw;
-  height: 90vw;
-  margin: auto;
-  padding: 10px;
-  background-color: #57333370;
-  border-radius: 20px;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 247, 247, 0.511),
-    rgba(255, 249, 249, 0) 80%
-  );
-  z-index:-1;
-}
+
 
 li,
 figcaption {
