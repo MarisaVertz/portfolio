@@ -7,18 +7,23 @@ body {
   background-size: cover; !*important;
   background-position: center; !important;
   background-repeat: no-repeat; !important;
-  background-attachment: scroll; !important;
+  background-attachment: fixed; !important;
   position: relative; !important;
 }
 
 @media (max-width: 768px) {
   body {
-    background-image: url("./assets/images/pastel2.png");
+    background-image: url("/assets/images/pastel2.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: scroll; /* Remove fixed for mobile */
+    background-attachment: scroll; 
   }
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
 }
 
 hr {
