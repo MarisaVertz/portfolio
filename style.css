@@ -35,7 +35,7 @@ hr {
   height: 90vw;
   margin: auto;
   padding: 10px;
-  background-color: #57333370;
+  background-color: transparent;
   border-radius: 20px;
   background: linear-gradient(
     to bottom,
@@ -237,7 +237,6 @@ body.project-page .Snuggs {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   padding: 0;
   gap: 20px;
@@ -277,6 +276,8 @@ body.project-page .Snuggs {
   box-shadow: 0 0 20px rgba(255, 255, 255, 0);
 }
 
+
+
 .close-btn {
   position: absolute;
   top: 10px;
@@ -284,7 +285,7 @@ body.project-page .Snuggs {
   font-size: 2rem;
   color: #333;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1000;
 }
 
 img {
