@@ -14,8 +14,8 @@ body {
 
 @media (max-width: 768px) {
   body {
-    background-attachment: scroll;
-    background-size:auto;
+    background-attachment: fixed;
+    background-size:cover;
     background-repeat: no-repeat;
     background-image: url("./assets/images/pastel2.png");
     background-position: center;
