@@ -3,7 +3,10 @@ function showSection(sectionId) {
   sections.forEach((section) => {
     section.style.display = "none";
   });
-  document.getElementById(sectionId).style.display = "block";
+  const target = document.getElementById(sectionId);
+  if (target) {
+    target.style.display = "block";
+  }
 
   if (sectionId === "projects") {
     document.body.classList.add("project-page");
@@ -28,51 +31,24 @@ function openProject(url) {
     .then((html) => {
       lightboxBody.innerHTML = html;
       lightbox.style.display = "flex";
-      console.log("Event Hub HTML injected.");
+      console.log(`${url} HTML injected.`);
 
-      // 🚀 Manually inject the script directly into the lightbox
-      if (url.includes("event-hub.html")) {
-        console.log("Injecting Event Hub script...");
-        
-        // Find the lightbox iframe's document
-        const script = document.createElement("script");
-        script.src = "./public/js/event-hub.js";
-        script.onload = () => {
-          console.log("✅ Event Hub script loaded and executed.");
-          // 🔥 Manually trigger the initial state
-          const homepage = document.getElementById('homepage');
-          const upcoming = document.getElementById('upcoming-events');
-          const past = document.getElementById('past-events');
-          
-          if (homepage && upcoming && past) {
-              homepage.style.display = 'block';
-              upcoming.style.display = 'none';
-              past.style.display = 'none';
-          }
-        };
-        
-        // Append it to the lightbox DOM
-        lightboxBody.appendChild(script);
-      }
+      const projectName = url.split('/').pop().replace('.html', '');
+      const scriptPath = `./public/js/${projectName}.js`;
+
+      const script = document.createElement("script");
+      script.src = scriptPath;
+      script.onload = () => {
+        console.log(`✅ ${projectName}.js loaded and executed.`);
+       
+      };
+
+      lightboxBody.appendChild(script);
     })
     .catch((err) => {
       console.error("Failed to load project:", err);
       lightboxBody.innerHTML = `<p style="color: red;">Failed to load project. Please try again later.</p>`;
     });
-}
-
-
-function openImageLightbox(imageSrc) {
-  const lightbox = document.getElementById("lightbox");
-  const lightboxBody = document.getElementById("lightbox-body");
-  lightboxBody.innerHTML = "";
-
-  const image = document.createElement("img");
-  image.src = imageSrc;
-  image.classList.add("lightbox-image");
-
-  lightboxBody.appendChild(image);
-  lightbox.style.display = "flex";
 }
 
 function closeLightbox() {
@@ -81,6 +57,8 @@ function closeLightbox() {
 
   lightbox.style.display = "none";
   lightboxBody.innerHTML = "";
+
+  restoreNavbar(); 
 }
 
 window.addEventListener("click", function (e) {
@@ -90,3 +68,22 @@ window.addEventListener("click", function (e) {
   }
 });
 
+function restoreNavbar() {
+  const navLinks = document.querySelectorAll(".navbar a");
+
+  navLinks.forEach((link) => {
+    const sectionId = link.getAttribute("data-section");
+    if (sectionId) {
+      link.onclick = (e) => {
+        e.preventDefault();
+        showSection(sectionId);
+      };
+    }
+  });
+}
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  showSection("home");
+  restoreNavbar();
+});
