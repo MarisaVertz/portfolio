@@ -6,7 +6,7 @@
 
     const lightboxBody = document.getElementById("lightbox-body");
 
-    const homepage = lightboxBody.querySelector('#eventhome'); // 🔁 was #homepage
+    const homepage = lightboxBody.querySelector('#eventhome'); 
     const upcoming = lightboxBody.querySelector('#upcoming-events');
     const past = lightboxBody.querySelector('#past-events');
     const buttons = lightboxBody.querySelectorAll('nav button');
@@ -40,7 +40,7 @@
     });
   }
 
-  showSection('eventhome'); // 🔁 was 'home'
+  showSection('eventhome'); 
 
   const lightboxBody = document.getElementById("lightbox-body");
   const navButtons = lightboxBody.querySelectorAll('nav button');
@@ -55,6 +55,6 @@
   });
 
   if (backBtn) {
-    backBtn.addEventListener('click', () => showSection('eventhome')); // 🔁 was 'home'
+    backBtn.addEventListener('click', () => showSection('eventhome')); 
   }
 })();
