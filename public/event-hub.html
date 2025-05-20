@@ -214,28 +214,30 @@
     </footer>
 
    <script>
-        function showSection(type) {
-            // Hide all sections
-            document.querySelectorAll("section").forEach(section => section.style.display = "none");
-            
-            // Show the target section
-            if (type === 'upcoming') {
-                document.getElementById('upcoming-events').style.display = "block";
-                document.getElementById('back-to-home').style.display = "block";
-            } else if (type === 'past') {
-                document.getElementById('past-events').style.display = "block";
-                document.getElementById('back-to-home').style.display = "block";
-            } else {
-                document.getElementById('homepage').style.display = "block";
-                document.getElementById('back-to-home').style.display = "none";
-            }
-        }
+    function showSection(type) {
+        console.log(`Switching to section: ${type}`);
+        
+        // Hide all sections
+        document.querySelectorAll("section").forEach(section => section.style.display = "none");
 
-        // Ensure the correct section is displayed on load
-        window.addEventListener('load', () => {
-            showSection('home');
-        });
-    </script>
+        // Show the target section
+        if (type === 'upcoming') {
+            document.getElementById('upcoming-events').style.display = "block";
+            document.getElementById('back-to-home').style.display = "block";
+        } else if (type === 'past') {
+            document.getElementById('past-events').style.display = "block";
+            document.getElementById('back-to-home').style.display = "block";
+        } else {
+            document.getElementById('homepage').style.display = "block";
+            document.getElementById('back-to-home').style.display = "none";
+        }
+    }
+
+    window.addEventListener('load', () => {
+        console.log("Page loaded, showing home section.");
+        showSection('home');
+    });
+</script>
 
 </body>
 
