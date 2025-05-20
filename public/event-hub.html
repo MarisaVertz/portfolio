@@ -129,7 +129,7 @@
         </nav>
     </header>
     <main>
-    <section id="homepage" class="active">
+    <section id="homepage">
         <h2>Welcome!</h2>
         <p>Explore upcoming and past events related to cats, food, and the great outdoors.</p>
           <div class="image-gallery">
@@ -142,7 +142,7 @@
   </div>
 </section>
     </section>
-    <section id="upcoming-events">
+    <section id="upcoming-events" style=""display: none;">
         <h2>Upcoming Events</h2>
         <div class="events-grid">
         <article>
@@ -171,7 +171,7 @@
         </article>
         </div>
     </section>
-    <section id="past-events">
+    <section id="past-events" style="display: none;">
         <h2>Past Events</h2>
         <div class="events-grid">
         <article>
@@ -212,32 +212,7 @@
             <a href="https://marisavertz.github.io/portfolio/" target="_blank">Portfolio</a>
         </p>
     </footer>
-
-   <script>
-    function showSection(type) {
-        console.log(`Switching to section: ${type}`);
-        
-        // Hide all sections
-        document.querySelectorAll("section").forEach(section => section.style.display = "none");
-
-        // Show the target section
-        if (type === 'upcoming') {
-            document.getElementById('upcoming-events').style.display = "block";
-            document.getElementById('back-to-home').style.display = "block";
-        } else if (type === 'past') {
-            document.getElementById('past-events').style.display = "block";
-            document.getElementById('back-to-home').style.display = "block";
-        } else {
-            document.getElementById('homepage').style.display = "block";
-            document.getElementById('back-to-home').style.display = "none";
-        }
-    }
-
-    window.addEventListener('load', () => {
-        console.log("Page loaded, showing home section.");
-        showSection('home');
-    });
-</script>
+<script src="./js/event-hub.js" defer></script>
 
 </body>
 

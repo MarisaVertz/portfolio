@@ -19,12 +19,48 @@ function openProject(url) {
   lightboxBody.innerHTML = "";
 
   fetch(url)
-    .then((res) => res.text())
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+      return res.text();
+    })
     .then((html) => {
       lightboxBody.innerHTML = html;
       lightbox.style.display = "flex";
+      console.log("Event Hub HTML injected.");
+
+      // 🚀 Manually inject the script directly into the lightbox
+      if (url.includes("event-hub.html")) {
+        console.log("Injecting Event Hub script...");
+        
+        // Find the lightbox iframe's document
+        const script = document.createElement("script");
+        script.src = "./public/js/event-hub.js";
+        script.onload = () => {
+          console.log("✅ Event Hub script loaded and executed.");
+          // 🔥 Manually trigger the initial state
+          const homepage = document.getElementById('homepage');
+          const upcoming = document.getElementById('upcoming-events');
+          const past = document.getElementById('past-events');
+          
+          if (homepage && upcoming && past) {
+              homepage.style.display = 'block';
+              upcoming.style.display = 'none';
+              past.style.display = 'none';
+          }
+        };
+        
+        // Append it to the lightbox DOM
+        lightboxBody.appendChild(script);
+      }
+    })
+    .catch((err) => {
+      console.error("Failed to load project:", err);
+      lightboxBody.innerHTML = `<p style="color: red;">Failed to load project. Please try again later.</p>`;
     });
 }
+
 
 function openImageLightbox(imageSrc) {
   const lightbox = document.getElementById("lightbox");
