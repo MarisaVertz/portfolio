@@ -124,12 +124,12 @@
         <h1>Cabarrus County Event Hub</h1>
          <p>Your one-stop shop for exciting local events!</p>
         <nav>
-            <button onclick="showSection('upcoming')">Upcoming Events</button>
-            <button onclick="showSection('past')">Past Events</button>
+            <button data-target="upcoming">Upcoming Events</button>
+            <button data-target="past">Past Events</button>
         </nav>
     </header>
     <main>
-    <section id="homepage">
+    <section id="eventhome" class="active">
         <h2>Welcome!</h2>
         <p>Explore upcoming and past events related to cats, food, and the great outdoors.</p>
           <div class="image-gallery">
@@ -142,7 +142,7 @@
   </div>
 </section>
     </section>
-    <section id="upcoming-events" style=""display: none;">
+    <section id="upcoming-events" style="display: none;">
         <h2>Upcoming Events</h2>
         <div class="events-grid">
         <article>
@@ -201,7 +201,7 @@
         </div>
     </section>
     <br><br>
-    <button id="back-to-home" onclick="showSection('home')">Back to Home</button>
+    <button id="back-to-home">Back to Home</button>
 </main>
     <footer>
         <br><br><hr>
