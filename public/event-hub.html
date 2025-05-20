@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event Hub</title>
+    <meta name="description" content="Check out the latest events happening!">
+
+    <style>
+        body {
+            font-family: Helvetica;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        nav {
+            justify-content: center;
+        }
+
+        #homepage {
+            text-align: center;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #d5c7c78b; 
+        }
+
+        h1 {
+            font-family: Century Gothic, sans-serif;
+            font-size: 40px;
+            color: #1f1313;
+            text-shadow: 3px 3px 3px #edccc56e;
+        }
+
+        h2 {
+            font-size: 26px;
+        }
+
+        h3 {
+            font-size: 22px;
+        }
+
+        article {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            border-left: 6px solid #79ca7b83;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding-left: 30px;
+        }
+
+        nav {
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        nav button {
+            padding: 0.5rem 1rem;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        nav button:hover {
+            background-color: #0c6812;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            margin-top: 1.5rem;
+        }
+
+        #back-to-home {
+            display: none;
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        #back-to-home:hover {
+            background-color: #0c6812;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Cabarrus County Event Hub</h1>
+         <p>Your one-stop shop for exciting local events!</p>
+        <nav>
+            <button onclick="showSection('upcoming')">Upcoming Events</button>
+            <button onclick="showSection('past')">Past Events</button>
+        </nav>
+    </header>
+    <main>
+    <section id="homepage" class="active">
+        <h2>Welcome!</h2>
+        <p>Explore upcoming and past events related to cats, food, and the great outdoors.</p>
+          <div class="image-gallery">
+<img src="https://cdn.pixabay.com/photo/2019/11/20/12/04/yoga-4639895_960_720.jpg" alt="Yoga class" />
+  <img src="https://cdn.pixabay.com/photo/2019/07/22/16/13/children-4355469_960_720.jpg" alt="people hiking" />
+  <img src="https://cdn.pixabay.com/photo/2016/11/19/20/55/apples-1841132_1280.jpg" alt="Food market, fruits" />
+  <img src="https://cdn.pixabay.com/photo/2012/09/26/17/35/music-58055_1280.jpg" alt="music performance" />
+  <img src="https://cdn.pixabay.com/photo/2019/04/15/13/48/ferris-wheel-4129391_1280.jpg" alt="ferris wheel" />
+  <img src="https://cdn.pixabay.com/photo/2017/01/04/21/00/new-years-eve-1953253_1280.jpg" alt="cat" />
+  </div>
+</section>
+    </section>
+    <section id="upcoming-events">
+        <h2>Upcoming Events</h2>
+        <div class="events-grid">
+        <article>
+            <h3>Cat Yoga in the Park</h3>
+            <b><time datetime="2025-06-08">June 8, 2025</time></b>
+            <p>Stretch out with adoptable cats and local yoga instructors during a relaxing morning in Greenview Park.</p>
+            <img src="https://cdn.pixabay.com/photo/2021/06/25/18/52/cat-6364493_960_720.jpg" width="500" alt="cat stretching">
+        </article>
+        <article>
+            <h3>Gourmet Taco Night</h3>
+            <b><time datetime="2025-07-12">July 12, 2025</time></b>
+            <p>Join us for a street food fiesta featuring gourmet tacos, local craft beer, and live acoustic music.</p>
+            <img src="https://cdn.pixabay.com/photo/2019/12/20/21/17/taco-4709325_1280.jpg" width="500" alt="Tacos on a plate">
+        </article>
+        <article>
+            <h3>Sunset Park Concert Series</h3>
+            <b><time datetime="2025-08-17">August 17, 2025</time></b>
+            <p>Enjoy live performances from local bands under the stars. Food trucks and local vendors will be on site for an evening of music and community fun.</p>
+            <img src="https://cdn.pixabay.com/photo/2016/07/20/22/15/crowd-1531431_1280.jpg" width="500" alt="outdoor concert">
+        </article>
+        <article>
+            <h3>Fall Harvest Market</h3>
+            <b><time datetime="2025-09-23">September 23, 2025</time></b>
+            <p>Celebrate the season with local produce, handmade crafts, and fresh baked goods at the community harvest market.</p>
+            <img src="https://cdn.pixabay.com/photo/2019/03/12/09/18/tomatoes-4050245_1280.jpg" width="500" alt="outdoor concert">
+        </article>
+        </div>
+    </section>
+    <section id="past-events">
+        <h2>Past Events</h2>
+        <div class="events-grid">
+        <article>
+            <h3>Campfire Cooking 101</h3>
+            <b><time datetime="2025-04-14">April 14, 2025</time></b>
+            <p>Learned the basics of outdoor cooking with cast iron, open flames, and gooey marshmallows under the stars.</p>
+            <img src="https://cdn.pixabay.com/photo/2022/02/17/17/51/cooking-7019200_1280.jpg" width="500" alt="Campfire with pot cooking">
+        </article>
+        <article>
+            <h3>Community Mural Day</h3>
+            <b><time datetime="2025-03-02">March 2, 2025</time></b>
+            <p>Families and artists came together to paint a collaborative mural showcasing local history and diversity.</p>
+            <img src="https://cdn.pixabay.com/photo/2017/03/20/01/45/painting-2158038_1280.jpg" width="500" alt="community painting together">
+        </article>
+        <article>
+            <h3>Neighborhood Chili Cook-Off</h3>
+            <b><time datetime="2025-02-15">February 15, 2025</time></b>
+            <p>Dozens of residents battled it out for the title of Best Chili, judged by the local fire department and town council.</p>
+            <img src="https://cdn.pixabay.com/photo/2020/12/11/17/06/food-5823301_1280.jpg" width="500" alt="bowl of chili">
+        </article>
+        <article>
+            <h3>Sunset Trail Walk & Picnic</h3>
+            <b><time datetime="2025-01-28">January 28, 2025</time></b>
+            <p>Join a guided walk through scenic woodland trails ending in a picnic with local farm-sourced goodies. Great for families and nature lovers.</p>
+            <img src="https://cdn.pixabay.com/photo/2022/11/03/01/18/mountain-7566409_1280.jpg" width="500" alt="bowl of chili">
+        </article>
+        </div>
+    </section>
+    <br><br>
+    <button id="back-to-home" onclick="showSection('home')">Back to Home</button>
+</main>
+    <footer>
+        <br><br><hr>
+        <p>© 2025 Marisa Vertz · Web Developer</p>
+        <p>
+            <a href="mailto:marisalvertz@gmail.com">Contact</a> |
+            <a href="https://github.com/MarisaVertz" target="_blank">GitHub</a> |
+            <a href="https://marisavertz.github.io/portfolio/" target="_blank">Portfolio</a>
+        </p>
+    </footer>
+
+   <script>
+        function showSection(type) {
+            // Hide all sections
+            document.querySelectorAll("section").forEach(section => section.style.display = "none");
+            
+            // Show the target section
+            if (type === 'upcoming') {
+                document.getElementById('upcoming-events').style.display = "block";
+                document.getElementById('back-to-home').style.display = "block";
+            } else if (type === 'past') {
+                document.getElementById('past-events').style.display = "block";
+                document.getElementById('back-to-home').style.display = "block";
+            } else {
+                document.getElementById('homepage').style.display = "block";
+                document.getElementById('back-to-home').style.display = "none";
+            }
+        }
+
+        // Ensure the correct section is displayed on load
+        window.addEventListener('load', () => {
+            showSection('home');
+        });
+    </script>
+
+</body>
+
+</html>
