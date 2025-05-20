@@ -149,7 +149,10 @@ body.project-page .Snuggs {
 #about .about-box {
   background-color: rgba(251, 245, 245, 0.762); 
   backdrop-filter: blur(15px); 
-  padding: 20px; 
+  padding-left: 30px; 
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 10px;
   border-radius: 15px; 
   position: relative; 
   z-index: 1; 
@@ -405,3 +408,21 @@ body.project-page .snuggles-wrapper {
   }
 }
 
+.about-image {
+  float: left;
+  width: 40%;
+  max-width: 300px;
+  height: auto;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+  .about-image {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 80%;
+  }
+}
