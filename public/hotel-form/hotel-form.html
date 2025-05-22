@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('hotel.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #181818;
+  padding: 40px;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.409);
+  z-index: -1;
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: hsla(0, 0%, 100%, 0.867);
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+h3 {
+  margin-bottom: 0.4rem;
+}
+
+p.centered {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.2) transparent;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 0.8rem; 
+  color: #777;     
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+legend {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  padding: 0;
+  color: #31304a;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: #444;
+  display: block;
+}
+
+label[for="comments"] {
+  margin-bottom: 0.3rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #ffffff8c;
+  color: #111;
+  box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #333;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 0.4rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+textarea#comments {
+  margin-top: 0 !important;
+  margin-bottom: 1rem;
+}
+
+button[type="submit"],
+input[type="submit"] {
+  width: 20%;
+  padding: 0.7rem 1.4rem;
+  margin: 0 auto;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+  background: #555;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+  margin: 2rem 0;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
+  margin-left: 0.3rem;
+  font-weight: normal;
+}
+
+input[type="checkbox"]:checked {
+  accent-color: #5889bb; 
+}
+
+select:focus {
+  border-color: #5889bb;
+  box-shadow: 0 0 0 2px rgba(30, 144, 255, 0.3); 
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #1e90ff;
+  box-shadow: 0 0 0 2px rgba(30, 144, 255, 0.3);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.form-row label {
+  width: auto;
+  margin: 0;
+}
+
+.form-row input {
+  flex: 1;
+  padding: 0.3rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.form-row-two {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: flex-end;
+}
+
+.form-row-two .form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row-two .age-group {
+  width: 120px;
+  flex: 0 0 auto;
+}
+
+.form-row-two .form-group input {
+  padding: 0.3rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  form {
+    gap: 1rem;
+  }
+
+  h1 {
+    font-size: 1.08rem;
+  }
+
+  h3 {
+    font-size: 0.7rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  legend {
+    font-size: 0.8rem;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 0.75rem;
+  }
+
+  label,
+  input,
+  select,
+  textarea,
+  button {
+    font-size: 0.8rem;
+  }
+
+  .form-row input {
+    font-size: 0.75rem;
+  }
+
+  .form-row-two {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-row-two .form-group,
+  .form-row-two .age-group {
+    width: 100%;
+  }
+
+  input#age {
+    width: 100%;
+  }
+
+ button[type="submit"] {
+    width: 50%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin: 0 auto;
+  }
+}
+
+        </style>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hotel Feedback Form</title>
+
+    </head>
+    <body>
+         <div class="background-wrapper">
+        <div class="container">
+        <header>
+            <h1>Hotel Feedback Form</h1>
+            <p class="centered">Thank you for staying with us. Please provide feedback on your recent stay.</p>
+            <hr>
+        </header>
+        <main>
+            <form method="POST" action="https://formspree.io/f/mbloedan">
+                
+                    <div class="form-row">
+                        <label for="full-name">Name (required):</label>
+                        <input type="text" id="full-name" name="name" placeholder="Ex. John Doe" required>
+                    </div>  
+                    <div class="form-row-two">
+                        <div class="form-group">
+                            <label for="email">Email address (required):</label>
+                            <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                        </div>
+                        <div class="form-group age-group">
+                            <label for="age">Age (optional):</label>
+                            <input type="number" id="age" name="age" min="3" max="120">
+                        </div>
+                    </div>
+                <fieldset>
+                    <legend>Was this your first time at our hotel?</legend>
+                    <input id="yes-option" type="radio" name="hotel-stay" /><label for="yes-option">Yes</label><br>
+                    <input id="no-option" type="radio" name="hotel-stay" /><label for="no-option">No</label>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Why did you choose to stay at our hotel? (Check all that apply)</legend>
+                    
+                    <input type="checkbox" id="ads" name="ads" value="ads" /><label for="ads">Social Media Ads</label><br>
+                    <input type="checkbox" id="recommendation" name="recommendation" value="recommendation"/><label for="recommendation">Personal Recommendation</label><br>
+                    <input type="checkbox" id="location" name="location" value="location" /><label for="location">Location</label><br>
+                    <input checked type="checkbox" id="reputation" name="reputation" value="reputation" /><label for="reputation">Reputation</label><br>
+                    <input type="checkbox" id="price" name="price" value="price" /><label for="price">Price</label><br>
+                </fieldset>
+               
+                <fieldset>
+                    <legend>Ratings</legend>
+                    <label for="service">How was the service?</label>
+                    <select name="service" id="service">
+                        <option value="poor">Poor</option>
+                        <option value="satisfactory">Satisfactory</option>
+                        <option value="good">Good</option>
+                        <option value="very-good">Very Good</option>
+                        <option selected value="excellent">Excellent</option>
+                    </select><br><br>
+                    <label for="food">How was the food?</label>
+                    <select name="food" id="food">
+                        <option value="poor">Poor</option>
+                        <option value="satisfactory">Satisfactory</option>
+                        <option value="good">Good</option>
+                        <option value="very-good">Very Good</option>
+                        <option selected value="excellent">Excellent</option>
+                    </select>
+                </fieldset>
+                <h3>Other Comments?</h3>
+                <textarea cols="30" rows="10" name="comments" id="comments"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+        </div>
+        </div>
+    </body>
+</html>
