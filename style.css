@@ -325,6 +325,28 @@ body.snuggle-page #snuggles-image {
   }
 }
 
+@media (max-width: 768px) {
+  .lightbox-content {
+    max-width: 90vw;
+    max-height: 95vh;
+    padding: 15px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .navbar a {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
 #about .about-box {
   background-color: rgba(251, 245, 245, 0.762);
   backdrop-filter: blur(15px);
