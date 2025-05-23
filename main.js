@@ -33,14 +33,13 @@ function openProject(url) {
       lightbox.style.display = "flex";
       console.log(`${url} HTML injected.`);
 
-      const projectName = url.split('/').pop().replace('.html', '');
+      const projectName = url.split("/").pop().replace(".html", "");
       const scriptPath = `./public/js/${projectName}.js`;
 
       const script = document.createElement("script");
       script.src = scriptPath;
       script.onload = () => {
         console.log(`✅ ${projectName}.js loaded and executed.`);
-       
       };
 
       lightboxBody.appendChild(script);
@@ -58,7 +57,7 @@ function closeLightbox() {
   lightbox.style.display = "none";
   lightboxBody.innerHTML = "";
 
-  restoreNavbar(); 
+  restoreNavbar();
 }
 
 window.addEventListener("click", function (e) {
@@ -81,7 +80,6 @@ function restoreNavbar() {
     }
   });
 }
-
 
 window.addEventListener("DOMContentLoaded", () => {
   showSection("home");
