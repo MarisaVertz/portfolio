@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+    <style>
+      body {
+        font-family: segoe ui, sans-serif;
+        background: #fbf5fa;
+        margin: 0;
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      form {
+        background-color: #ffffff;
+        padding: 30px 40px;
+        border-radius: 16px;
+        max-width: 500px;
+        width: 100%;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        border: 1px solid #f0e8e4;
+      }
+
+      h1 {
+        font-family: "Century Gothic", sans-serif;
+        font-size: 30px;
+        color: #402f56;
+        text-align: center;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 2px #f2d8be;
+      }
+
+      #description {
+        text-align: center;
+        color: #7a5e5e;
+        margin-bottom: 30px;
+      }
+
+      p {
+        margin-top: 20px;
+        color: #4b2e2e;
+        font-size: 14px;
+      }
+
+      .form-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .email-group {
+        width: 68%;
+      }
+
+      .age-group {
+        width: calc(32% - 20px);
+      }
+
+      .email-group input,
+      .age-group input {
+        width: 100%;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #d8cfcf;
+        border-radius: 10px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 14px;
+        box-sizing: border-box;
+        background-color: #fefefe;
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin: 0;
+        margin-right: 8px;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        outline: none;
+        border-color: #c3c1e9;
+        box-shadow: 0 0 0 2px rgba(169, 186, 247, 0.4);
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        font-size: 12px;
+        color: #999;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      label {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        color: #3a2a2a;
+        font-weight: 500;
+        font-size: 14px;
+      }
+
+      textarea {
+        font-family: segoe ui, sans-serif;
+        font-size: 14px;
+      }
+
+      .question-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+
+      .question-block {
+        flex: 1;
+        min-width: 200px;
+      }
+
+      .question-label {
+        font-weight: 500;
+        margin-bottom: 8px;
+        font-size: 14px;
+      }
+
+      .question-block label {
+        display: flex !important;
+        align-items: center;
+        gap: 6px;
+        margin: 4px 0 !important;
+        font-weight: normal !important;
+      }
+
+      .checkbox-group {
+        margin-top: 10px;
+      }
+
+      .checkbox-item {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 8px;
+      }
+
+      .checkbox-item label {
+        margin: 0;
+      }
+
+      #other-input-container {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.3s ease, max-height 0.3s ease;
+      }
+
+      #other-input-container.show {
+        opacity: 1;
+        max-height: 100px;
+        margin-top: 10px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .show {
+        display: block;
+        margin-top: 10px;
+      }
+
+      .button-wrapper {
+        text-align: center;
+      }
+
+      button {
+        margin-top: 20px;
+        padding: 12px 24px;
+        font-size: 14px;
+        background-color: #a0b8e588;
+        color: #000000;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #b5b6ee98;
+      }
+
+      .secondary-button {
+        display: inline-block;
+        padding: 6px 16px;
+        font-size: 13px;
+        background-color: #f2e8ff;
+        color: #402f56;
+        text-decoration: none;
+        border-radius: 8px;
+        border: 1px solid #d3c5f0;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .secondary-button:hover {
+        background-color: #e5dafb;
+        color: #2e2341;
+      }
+
+      @media (max-width: 600px) {
+        .form-row {
+          flex-direction: column;
+          gap: 0;
+        }
+
+        .email-group,
+        .age-group {
+          width: 100%;
+          align-items: stretch;
+        }
+
+        .age-group {
+          display: block;
+        }
+
+        .question-row {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        h1 {
+          font-size: 28px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      method="POST"
+      action="https://formspree.io/f/xanozlwy"
+      formid="survey-form"
+    >
+      <h1 id="title">Website Survey</h1>
+      <p id="description">
+        <a
+          href="https://marisavertz.github.io/portfolio/"
+          class="secondary-button"
+          target="_blank"
+          ><b>View My Website</b></a
+        ><br /><br />
+        I'm always working to make sure my website is neat and enjoyable.
+        <br />Your feedback really helps!
+      </p>
+      <label for="name" id="name-label">Name</label>
+      <input type="text" id="name" placeholder="Ex. John Smith" required />
+      <br />
+
+      <div class="form-row">
+        <div class="form-group email-group">
+          <label for="email" id="email-label">Email</label>
+          <input type="email" id="email" placeholder="Example@email.com" />
+        </div>
+        <div class="form-group age-group">
+          <label for="number" id="number-label">Age (optional)</label>
+          <input type="number" id="number" min="3" max="120" placeholder="35" />
+        </div>
+      </div>
+      <label for="dropdown">How did you find my website?</label>
+      <select name="dropdown" id="dropdown" onchange="handleDropdownChange()">
+        <option value="github">GitHub</option>
+        <option value="linkedin">LinkedIn</option>
+        <option value="social-media">Social media</option>
+        <option value="direct-link">Direct link</option>
+        <option value="other">Other</option>
+      </select>
+
+      <div id="other-input-container" class="hidden">
+        <label for="other-text">Please specify:</label>
+        <input type="text" id="other-text" name="other-text" />
+      </div>
+      <br />
+
+      <div class="question-row">
+        <div class="question-block">
+          <p class="question-label">Was my website easy to navigate?</p>
+          <label><input type="radio" name="like-site" value="yes" /> Yes</label>
+          <label><input type="radio" name="like-site" value="no" /> No</label>
+        </div>
+
+        <div class="question-block">
+          <p class="question-label">
+            What do you like about my website? (check all that apply)
+          </p>
+          <label
+            ><input
+              type="checkbox"
+              id="portfolio-structure"
+              name="portfolio-structure"
+              value="portfolio-structure"
+            />
+            Portfolio Structure</label
+          >
+          <label
+            ><input type="checkbox" id="design" name="design" value="design" />
+            Aesthetic & Design</label
+          ><label
+            ><input
+              type="checkbox"
+              id="Functionality"
+              name="Functionality"
+              value="Functionality"
+            />
+            Functionality</label
+          >
+          <label
+            ><input
+              type="checkbox"
+              id="snuggle-page"
+              name="snuggle-page"
+              value="snuggle-page"
+            />
+            Secret Page😺</label
+          >
+        </div>
+      </div>
+
+      <br />
+      <label for="comments">Comments?</label><br />
+      <textarea cols="30" rows="10" id="comments" name="comments"></textarea
+      ><br /><br />
+
+      <div class="button-wrapper">
+        <button type="submit" id="submit"><b>Submit</b></button>
+      </div>
+    </form>
+
+    <script>
+      function handleDropdownChange() {
+        const dropdown = document.getElementById("dropdown");
+        const otherInputContainer = document.getElementById(
+          "other-input-container"
+        );
+        const otherText = document.getElementById("other-text");
+
+        if (dropdown.value === "other") {
+          otherInputContainer.classList.remove("hidden");
+          otherInputContainer.classList.add("show");
+          otherText.setAttribute("required", "true");
+        } else {
+          otherInputContainer.classList.remove("show");
+          otherInputContainer.classList.add("hidden");
+          otherText.removeAttribute("required");
+        }
+      }
+    </script>
+  </body>
+</html>
