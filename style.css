@@ -325,8 +325,6 @@ body.snuggle-page #snuggles-image {
   }
 }
 
-
-
 #about .about-box {
   background-color: rgba(251, 245, 245, 0.762);
   backdrop-filter: blur(15px);
@@ -337,6 +335,43 @@ body.snuggle-page #snuggles-image {
   max-width: 800px;
   margin: auto;
 }
+
+
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("./assets/images/pastel2.png");
+    background-position: center;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+
+  h4 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+
 
 .about-image {
   float: left;
@@ -374,13 +409,13 @@ body.snuggle-page #snuggles-image {
 
 @media (max-width: 768px) {
   .snuggles-gallery {
-    column-count: 2;
+    column-count: 3;
     column-gap: 10px;
     padding: 10px;
   }
 
   .snuggles-gallery img {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 }
 
