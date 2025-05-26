@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Palette Guide</title>
+    <style>
+      body {
+  font-family: segoe ui, sans-serif;
+  margin: 20px;
+  padding: 20px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #eae0e069;
+}
+
+h1 {
+  font-family: Century Gothic, sans-serif;
+  font-size: 35px;
+  color: #333131;
+  text-shadow: 3px 3px 3px #edccc56e;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+
+.theme-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: #1a1a1a;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0 px;
+  margin: 20px auto;
+  border: none;
+  background-color: #fcf9f9;
+  border-radius: 12px;
+  overflow: visible;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+  width: 80%;
+}
+
+th,
+td {
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  color: #444444;
+}
+
+th {
+  background-color: #f5eded6e;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+td:first-child {
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+td {
+  background-color: #ffffff;
+}
+
+tr {
+  transition: all 0.2s ease-in-out;
+  
+}
+
+#theme-color-details {
+  font-size: 10px;
+}
+
+#theme-color-details th,
+#theme-color-details td {
+  padding: 4px;
+  font-size: 10px;
+}
+
+.color-details-cell {
+  padding: 0;
+}
+
+.color-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.color-block {
+  border: 1px solid #e5e5e5;
+  padding: 8px;
+  width: 50px;
+  text-align: center;
+  font-size: 12px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  border: 1px solid rgba(150, 150, 150, 0.1);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.color-block div {
+  border-radius: 6px;
+}
+
+.swatch-preview-cell {
+  padding: 10px 14px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.swatch-preview-cell img {
+  border-radius: 8px;
+}
+
+.swatch-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .table-wrapper {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  table {
+    width: 100%;
+    font-size: 10px;
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody,
+  tr {
+    display: block;
+    width: 100%;
+  }
+
+  td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 4px 0;
+  }
+
+  .theme-name {
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 12px;
+  }
+
+  .color-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 4px;
+    padding: 4px;
+  }
+
+  .color-block {
+    width: 17%;
+    padding: 4px;
+    font-size: 8px;
+  }
+
+  .color-block div {
+    height: 18px;
+    border-radius: 4px;
+    margin-bottom: 2px;
+  }
+
+  .color-block p {
+    font-size: 7px;
+    margin: 2px 0;
+  }
+
+  .color-block p strong {
+    font-size: 8px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h4,
+  p {
+    font-size: 12px;
+  }
+
+  th:nth-child(3),
+  td:nth-child(3),
+  colgroup col:nth-child(3) {
+    display: none;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">Custom Color Palettes</h1>
+    <h4 style="text-align: center">
+      This guide provides a comprehensive overview of my favorite custom color
+      palettes to use for design.
+    </h4>
+    <div class="table-wrapper">
+    <table id="theme-color-table">
+      <colgroup>
+        <col style="width: 15%;">  
+        <col style="width: 55%;">   
+        <col style="width: 45%;">   
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Theme Name</th>
+          <th>Color Details</th>
+          <th>Swatch Preview</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="theme-name"></div>Blush & Sage</td>
+            <td class="color-details-cell">
+              <div class="color-grid">
+                <div class="color-block">
+                  <p><strong><div style="background-color: #EDAFB8; height: 30px; width: 100%; margin-bottom: 6px;"></div>Rose Milk</strong></p>
+                  <p>#EDAFB8</p>
+                  <p>RGB(237, 175, 184)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #F7E1D7; height: 30px; width: 100%; margin-bottom: 6px;"></div>Petal Cream</strong></p>
+                  <p>#F7E1D7</p>
+                  <p>RGB(247, 255, 215)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #DEDBD2; height: 30px; width: 100%; margin-bottom: 6px;"></div>Driftstone</strong></p>
+                  <p>#DEDBD2</p>
+                  <p>RGB(222, 219, 210)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #B0C4B1; height: 30px; width: 100%; margin-bottom: 6px;"></div>Muted Grove</strong></p>
+                  <p>#B0C4B1</p>
+                  <p>RGB(176, 196, 177)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #4A5759; height: 30px; width: 100%; margin-bottom: 6px;"></div>Moss Iron</strong></p>
+                  <p>#4A5759</p>
+                  <p>RGB(74, 87, 89)</p>
+                </div>
+              </div>
+            </td>
+          </td>
+          <td class="swatch-preview-cell"><img src="../assets/images/Blush&Sage_notxt.png" width="300px"><br><hr>
+            <img src="../assets/images/Blush&Sage_txt.png" width="300px"></td>
+        </tr>
+        <tr>
+          <td class="theme-name">Postmarked Fervor</td>
+            <td class="color-details-cell">
+              <div class="color-grid">
+                <div class="color-block">
+                  <p><strong><div style="background-color: #1E1E2F; height: 30px; width: 100%; margin-bottom: 6px;"></div>Crushed Plum</strong></p>
+                  <p>#1E1E2F</p>
+                  <p>RGB(30, 30, 47)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #4A4E69; height: 30px; width: 100%; margin-bottom: 6px;"></div>Pressed Velvet</strong></p>
+                  <p>#4A4E69</p>
+                  <p>RGB(74, 78, 105)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #9A8C98; height: 30px; width: 100%; margin-bottom: 6px;"></div>Heatherlight</strong></p>
+                  <p>#9A8C98</p>
+                  <p>RGB(154, 140, 152)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #C9ADA7; height: 30px; width: 100%; margin-bottom: 6px;"></div>Antique Rosewood</strong></p>
+                  <p>#C9ADA7</p>
+                  <p>RGB(201, 173, 167)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #F2E9E4; height: 30px; width: 100%; margin-bottom: 6px;"></div>Blushed Linen</strong></p>
+                  <p>#F2E9E4</p>
+                  <p>RGB(242, 233, 228)</p>
+                </div>
+              </div>
+            </td>
+          </td>
+          <td class="swatch-preview-cell"><img src="../assets/images/Postmarked_Fervor_notxt.png" width="300px"><br><hr>
+            <img src="../assets/images/Postmarked_Fervor_txt.png" width="300px"></td>
+        </tr>
+        <tr>
+          <td class="theme-name">Terracotta Calm</td>
+            <td class="color-details-cell">
+              <div class="color-grid">
+                <div class="color-block">
+                  <p><strong><div style="background-color: #463F3A; height: 30px; width: 100%; margin-bottom: 6px;"></div>Cold Soil</strong></p>
+                  <p>#463F3A</p>
+                  <p>RGB(70, 63, 58)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #8A817C; height: 30px; width: 100%; margin-bottom: 6px;"></div>Weathered Taupe</strong></p>
+                  <p>#8A817C</p>
+                  <p>RGB(138, 129, 124)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #BCB8B1; height: 30px; width: 100%; margin-bottom: 6px;"></div>Warmed Stone</strong></p>
+                  <p>#BCB8B1</p>
+                  <p>RGB(188, 184, 177)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #F4F3EE; height: 30px; width: 100%; margin-bottom: 6px;"></div>Raw Cotton</strong></p>
+                  <p>#F4F3EE</p>
+                  <p>RGB(244, 243, 238)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #E0AFA0; height: 30px; width: 100%; margin-bottom: 6px;"></div>Claywash</strong></p>
+                  <p>#E0AFA0</p>
+                  <p>RGB(224, 175, 160)</p>
+                </div>
+              </div>
+            </td>
+          </td>
+          <td class="swatch-preview-cell"><img src="../assets/images/Terracotta_Calm_notxt.png" width="300px"><br><hr>
+            <img src="../assets/images/Terracotta_Calm_txt.png" width="300px"></td>
+        </tr>
+        <tr>
+          <td class="theme-name">Overcast Indigo</td>
+            <td class="color-details-cell">
+              <div class="color-grid">
+                <div class="color-block">
+                  <p><strong><div style="background-color: #222535; height: 30px; width: 100%; margin-bottom: 6px;"></div>Deep Indigo</strong></p>
+                  <p>#222535</p>
+                  <p>RGB(34, 37, 53)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #393C52; height: 30px; width: 100%; margin-bottom: 6px;"></div>Graphite Current</strong></p>
+                  <p>#393C52</p>
+                  <p>RGB(57, 60, 82)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #5D6079; height: 30px; width: 100%; margin-bottom: 6px;"></div>Steel Mirage</strong></p>
+                  <p>#5D6079</p>
+                  <p>RGB(93, 96, 121)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #d0d3de; height: 30px; width: 100%; margin-bottom: 6px;"></div>Faded Alloy</strong></p>
+                  <p>#d0d3de</p>
+                  <p>RGB(208, 211, 222)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #FEFEFE; height: 30px; width: 100%; margin-bottom: 6px;"></div>Drift</strong></p>
+                  <p>#FEFEFE</p>
+                  <p>RGB(254, 254, 254)</p>
+                </div>
+              </div>
+            </td>
+          </td>
+          <td class="swatch-preview-cell"><img src="../assets/images/Overcast_Indigo_notxt.png" width="300px"><br><hr>
+            <img src="../assets/images/Overcast_Indigo_txt.png" width="300px"></td>
+        
+        </tr>
+        <tr>
+          <td class="theme-name">Lavender Dusk</td>
+            <td class="color-details-cell">
+              <div class="color-grid">
+                <div class="color-block">
+                  <p><strong><div style="background-color: #e8e7e7; height: 30px; width: 100%; margin-bottom: 6px;"></div>Fog Milk</strong></p>
+                  <p>#e8e7e7</p>
+                  <p>RGB(232, 231, 231)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #C4CAD0; height: 30px; width: 100%; margin-bottom: 6px;"></div>Silverwash</strong></p>
+                  <p>#C4CAD0</p>
+                  <p>RGB(196, 202, 208)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #87868F; height: 30px; width: 100%; margin-bottom: 6px;"></div>Wistera Stone</strong></p>
+                  <p>#87868F</p>
+                  <p>RGB(135, 134, 143)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #A4969B; height: 30px; width: 100%; margin-bottom: 6px;"></div>Mauve Cream</strong></p>
+                  <p>#A4969B</p>
+                  <p>RGB(164, 150, 155)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #655560; height: 30px; width: 100%; margin-bottom: 6px;"></div>Velvet Plum</strong></p>
+                  <p>#655560</p>
+                  <p>RGB(101, 85, 96)</p>
+                </div>
+              </div>
+            </td>
+          </td>
+          <td class="swatch-preview-cell"><img src="../assets/images/Lavender_Dusk_notxt.png" width="300px"><br><hr>
+            <img src="../assets/images/Lavender_Dusk_txt.png" width="300px"></td>
+        
+        </tr>
+        <tr>
+          <td class="theme-name">Almost Blooming</td>
+            <td class="color-details-cell">
+              <div class="color-grid">
+                <div class="color-block">
+                  <p><strong><div style="background-color: #D8E2DC; height: 30px; width: 100%; margin-bottom: 6px;"></div>Pale Sage</strong></p>
+                  <p>#D8E2DC</p>
+                  <p>RGB(216, 226, 220)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #FFE5D9; height: 30px; width: 100%; margin-bottom: 6px;"></div>Bare Apricot</strong></p>
+                  <p>#FFE5D9</p>
+                  <p>RGB(225, 229, 217)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #FFCAD4; height: 30px; width: 100%; margin-bottom: 6px;"></div>Soft Petal</strong></p>
+                  <p>#FFCAD4</p>
+                  <p>RGB(255, 202, 212)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #F4ACB7; height: 30px; width: 100%; margin-bottom: 6px;"></div>Coral Rouge</strong></p>
+                  <p>#F4ACB7</p>
+                  <p>RGB(244, 172, 183)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #9D8189; height: 30px; width: 100%; margin-bottom: 6px;"></div>Muted Mulberry</strong></p>
+                  <p>#9D8189</p>
+                  <p>RGB(157, 129, 137)</p>
+                </div>
+              </div>
+            </td>
+          </td>
+          <td class="swatch-preview-cell"><img src="../assets/images/Almost_Blooming_notxt.png" width="300px"><br><hr>
+            <img src="../assets/images/Almost_Blooming_txt.png" width="300px"></td>
+        
+        </tr>
+        <tr>
+          <td class="theme-name">Forest Ink</td>
+            <td class="color-details-cell">
+              <div class="color-grid">
+                <div class="color-block">
+                  <p><strong><div style="background-color: #192120; height: 30px; width: 100%; margin-bottom: 6px;"></div>Black Spruce</strong></p>
+                  <p>#192120</p>
+                  <p>RGB(25, 33, 32)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #2D403D; height: 30px; width: 100%; margin-bottom: 6px;"></div>Shadow Pine</strong></p>
+                  <p>#2D403D</p>
+                  <p>RGB(45, 64, 61)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #41554D; height: 30px; width: 100%; margin-bottom: 6px;"></div>Hollow Fern</strong></p>
+                  <p>#41554D</p>
+                  <p>RGB(65, 85, 77)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #81978A; height: 30px; width: 100%; margin-bottom: 6px;"></div>Weathered Sage</strong></p>
+                  <p>#81978A</p>
+                  <p>RGB(129, 151, 138)</p>
+                </div>
+                <div class="color-block">
+                  <p><strong><div style="background-color: #eef4ef; height: 30px; width: 100%; margin-bottom: 6px;"></div>Moss Cream</strong></p>
+                  <p>#eef4ef</p>
+                  <p>RGB(238, 244, 239)</p>
+                </div>
+              </div>
+            </td>
+          </td>
+          <td class="swatch-preview-cell"><img src="../assets/images/Forest_Mist_notxt.png" width="300px"><br><hr>
+            <img src="../assets/images/Forest_Mist_txt.png" width="300px"></td>
+        
+        </tr>
+      </tbody>
+    </div>
+    </table>
+
+    <footer>
+      <br><br><hr>
+      <p style="text-align: center">© 2025 Marisa Vertz · Web Developer</p>
+      <p style="text-align: center">
+          <a href="mailto:marisalvertz@gmail.com">Contact</a> |
+          <a href="https://github.com/MarisaVertz" target="_blank">GitHub</a> |
+          <a href="https://marisavertz.github.io/portfolio/" target="_blank">Portfolio</a>
+      </p>
+  </footer>
+  </body>
+</html>
