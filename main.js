@@ -85,3 +85,14 @@ window.addEventListener("DOMContentLoaded", () => {
   showSection("home");
   restoreNavbar();
 });
+
+function openPosterImage() {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxBody = document.getElementById("lightbox-body");
+
+  lightboxBody.innerHTML = `
+    <img src="./assets/images/poster_screenshot.png" alt="Motivational Poster Preview" style="width:100%; height:auto;" />
+  `;
+
+  lightbox.style.display = "flex";
+}
