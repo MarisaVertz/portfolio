@@ -61,8 +61,6 @@ img {
   height: auto;
 }
 
-
-
 .navbar {
   background-color: #d9ccd722;
   width: 100%;
@@ -92,8 +90,6 @@ img {
   background-color: #ba949415;
   border-radius: 8px;
 }
-
-
 
 .content-section {
   max-width: 800px;
@@ -168,8 +164,6 @@ img {
   background-color: #ffffff;
   transform: scale(1.05);
 }
-
-
 
 .lightbox {
   position: fixed;
@@ -252,8 +246,6 @@ img {
   z-index: 1001;
 }
 
-
-
 .Snuggs {
   position: absolute;
   bottom: 0;
@@ -300,7 +292,89 @@ body.snuggle-page #snuggles-image {
   pointer-events: auto;
 }
 
+.contact-box {
+  background-color: rgba(251, 245, 245, 0.336);
+  backdrop-filter: blur(15px);
+  padding: 5px 30px 10px 30px;
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: auto;
+}
 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.contact-form label {
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: rgba(250, 237, 237, 0.089);
+  color: rgb(70, 95, 119);
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid #d7d7f7;
+  box-shadow: 0 0 5px #ffffff88;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid #d5c7c78b;
+}
+
+.contact-form button {
+  background-color: #ffffff57;
+  color: #836767;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  box-shadow: 0 1px 5px rgba(114, 97, 97, 0.2);
+  align-self: flex-start;
+  width: auto;
+}
+
+.contact-form button:hover {
+  background-color: #ffffff;
+  transform: scale(1.05);
+}
 
 @media (min-width: 769px) {
   .Snuggs {
@@ -358,8 +432,6 @@ body.snuggle-page #snuggles-image {
   margin: auto;
 }
 
-
-
 @media (max-width: 768px) {
   body {
     background-attachment: fixed;
@@ -383,7 +455,6 @@ body.snuggle-page #snuggles-image {
     font-size: 18px;
   }
 
-
   h4 {
     font-size: 16px;
   }
@@ -393,7 +464,11 @@ body.snuggle-page #snuggles-image {
   }
 }
 
-
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
 
 .about-image {
   float: left;
@@ -440,7 +515,6 @@ body.snuggle-page #snuggles-image {
     margin-bottom: 5px;
   }
 }
-
 
 @media (max-width: 600px) {
   .about-image {
