@@ -194,8 +194,8 @@ img {
   background: transparent;
   padding: 0;
   margin: 0;
-  max-width: 95vw;
-  max-height: 95vh;
+  max-width: 100vw;
+  max-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,8 +204,8 @@ img {
 #snuggles-lightbox-img {
   outline: none;
   outline-offset: 0;
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 98vw;
+  max-height: 98vh;
   display: block;
   margin: 0 auto;
   border-radius: 12px;
@@ -237,7 +237,7 @@ img {
 .snuggles-lightbox .close-btn {
   position: absolute;
   top: -40px;
-  right: 20px;
+  right: 1px;
   font-size: 2rem;
   color: white;
   background: none;
