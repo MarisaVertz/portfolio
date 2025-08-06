@@ -96,3 +96,16 @@ function openPosterImage() {
 
   lightbox.style.display = "flex";
 }
+
+function openWriteLightDemo() {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxBody = document.getElementById("lightbox-body");
+
+  lightboxBody.innerHTML = `
+    <video controls autoplay style="width:100%; height:auto;">
+      <source src="./assets/images/WriteLight_Demo_8.6.mp4" type="video/mp4">
+    </video>
+  `;
+
+  lightbox.style.display = "flex";
+}
