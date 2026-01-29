@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -48,6 +48,24 @@
       <br />
       <ul class="project-grid">
         <li>
+          <h4>
+            John Michael Kohler Arts Center: Website Management & Development
+            (2020–Present)
+          </h4>
+          <a href="https://www.jmkac.org/" class="github-btn" target="_blank"
+            >View Website</a
+          >
+          <p>
+            <b>Webmaster / Web Developer / Web Content Administrator</b><br />
+          </p>
+          <a href="https://www.jmkac.org/" target="_blank"
+            ><img
+              src="./assets/images/jmkac homepage.png"
+              width="300"
+              class="project-preview"
+          /></a>
+        </li>
+        <li>
           <h4>WriteLight - Javascript</h4>
           <a
             href="https://github.com/freeCodeCamp-2025-Summer-Hackathon/purple-array"
@@ -59,7 +77,12 @@
             <b>Project Manager / Frontend</b><br />
             Tech Stack: MongoDB, Express.js, React, Node.js (MERN)
           </p>
-          <a href="#" onclick="openWriteLightDemo(); return false;"
+          <a
+            href="#"
+            onclick="
+              openWriteLightDemo();
+              return false;
+            "
             ><img
               src="./assets/images/WriteLight.png"
               width="300"
@@ -70,6 +93,7 @@
             class="project-preview"
           />
         </li>
+
         <li>
           <h4>jQuery Simon Game</h4>
           <a
@@ -310,7 +334,13 @@
             Practicing with HTML and CSS, I created a motivational poster. If he
             fits, he sits!
           </p>
-          <a href="#" onclick="openPosterImage(); return false;">
+          <a
+            href="#"
+            onclick="
+              openPosterImage();
+              return false;
+            "
+          >
             <img
               src="./assets/images/poster_screenshot.png"
               width="300"
@@ -331,7 +361,10 @@
           </p>
           <a
             href="#"
-            onclick="openProject('./public/video-compilation.html'); return false;"
+            onclick="
+              openProject('./public/video-compilation.html');
+              return false;
+            "
             ><img
               src="./assets/images/video-compilation-page.png"
               width="300"
@@ -349,7 +382,10 @@
           <p>Practicing HTML, I made a mockup travel agency blog post.</p>
           <a
             href="#"
-            onclick="openProject('./public/travel-agency-blog.html'); return false;"
+            onclick="
+              openProject('./public/travel-agency-blog.html');
+              return false;
+            "
             ><img
               src="./assets/images/TravelAgencyBlog.png"
               width="300"
@@ -370,7 +406,10 @@
           </p>
           <a
             href="#"
-            onclick="openProject('./public/cat-blog.html'); return false;"
+            onclick="
+              openProject('./public/cat-blog.html');
+              return false;
+            "
             ><img
               src="./assets/images/catblogscreenshot.png"
               width="300"
@@ -393,7 +432,10 @@
           </p>
           <a
             href="#"
-            onclick="openProject('./public/recipe.html'); return false;"
+            onclick="
+              openProject('./public/recipe.html');
+              return false;
+            "
             ><img
               src="./assets/images/recipe.png"
               width="300"
@@ -412,7 +454,10 @@
           >
           <a
             href="#"
-            onclick="openProject('./public/movie-ranking.html'); return false;"
+            onclick="
+              openProject('./public/movie-ranking.html');
+              return false;
+            "
             ><img
               src="./assets/images/top_movies_screenshot.png"
               width="300"
@@ -430,7 +475,10 @@
           <p>Practicing with basic HTML properties.</p>
           <a
             href="#"
-            onclick="openProject('./public/birthday-invite.html'); return false;"
+            onclick="
+              openProject('./public/birthday-invite.html');
+              return false;
+            "
             ><img
               src="./assets/images/birthday--invite.png"
               width="300"
@@ -514,7 +562,7 @@
       style="display: none"
       onclick="closeLightbox()"
     >
-      <div class="lightbox-content" onclick="event.stopPropagation();">
+      <div class="lightbox-content" onclick="event.stopPropagation()">
         <span class="close-btn" onclick="closeLightbox()">&times;</span>
         <div id="lightbox-body"></div>
       </div>
